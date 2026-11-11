@@ -1,0 +1,77 @@
+<mxfile host="drawio">
+  <diagram id="cache-hierarchy" name="Cache hierarchy">
+    <mxGraphModel dx="800" dy="640" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="800" pageHeight="640" background="#000000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- CPU package -->
+        <mxCell id="pkg" value="CPU package" style="rounded=1;arcSize=4;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#737373;dashed=1;fontColor=#a3a3a3;fontSize=14;fontStyle=1;verticalAlign=top;align=left;spacingLeft=12;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="720" height="440" as="geometry" />
+        </mxCell>
+
+        <!-- Core 0 -->
+        <mxCell id="core0" value="Core 0" style="rounded=1;arcSize=5;whiteSpace=wrap;html=1;fillColor=#0a0a0a;strokeColor=#525252;fontColor=#e5e5e5;fontSize=13;fontStyle=1;verticalAlign=top;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="40" y="60" width="320" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="reg0" value="Registers&lt;br&gt;&lt;font style=&quot;font-size:11px&quot; color=&quot;#a3a3a3&quot;&gt;~0.3 ns&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#262626;strokeColor=#a3a3a3;fontColor=#f5f5f5;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="120" y="95" width="160" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="l1i0" value="L1i · 32 KB&lt;br&gt;&lt;font style=&quot;font-size:11px&quot; color=&quot;#a3a3a3&quot;&gt;instructions · ~1 ns&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#052e16;strokeColor=#4ade80;fontColor=#f5f5f5;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="55" y="170" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="l1d0" value="L1d · 32 KB&lt;br&gt;&lt;font style=&quot;font-size:11px&quot; color=&quot;#a3a3a3&quot;&gt;data · ~1 ns&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#052e16;strokeColor=#4ade80;fontColor=#f5f5f5;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="205" y="170" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="l20" value="L2 · 256 KB&lt;br&gt;&lt;font style=&quot;font-size:11px&quot; color=&quot;#a3a3a3&quot;&gt;private to core · ~4 ns&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#082f49;strokeColor=#38bdf8;fontColor=#f5f5f5;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="80" y="250" width="240" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Core 1 -->
+        <mxCell id="core1" value="Core 1" style="rounded=1;arcSize=5;whiteSpace=wrap;html=1;fillColor=#0a0a0a;strokeColor=#525252;fontColor=#e5e5e5;fontSize=13;fontStyle=1;verticalAlign=top;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="400" y="60" width="320" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="reg1" value="Registers&lt;br&gt;&lt;font style=&quot;font-size:11px&quot; color=&quot;#a3a3a3&quot;&gt;~0.3 ns&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#262626;strokeColor=#a3a3a3;fontColor=#f5f5f5;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="480" y="95" width="160" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="l1i1" value="L1i · 32 KB&lt;br&gt;&lt;font style=&quot;font-size:11px&quot; color=&quot;#a3a3a3&quot;&gt;instructions · ~1 ns&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#052e16;strokeColor=#4ade80;fontColor=#f5f5f5;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="415" y="170" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="l1d1" value="L1d · 32 KB&lt;br&gt;&lt;font style=&quot;font-size:11px&quot; color=&quot;#a3a3a3&quot;&gt;data · ~1 ns&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#052e16;strokeColor=#4ade80;fontColor=#f5f5f5;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="565" y="170" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="l21" value="L2 · 256 KB&lt;br&gt;&lt;font style=&quot;font-size:11px&quot; color=&quot;#a3a3a3&quot;&gt;private to core · ~4 ns&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#082f49;strokeColor=#38bdf8;fontColor=#f5f5f5;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="440" y="250" width="240" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Shared L3 -->
+        <mxCell id="l3" value="L3 · 6 MB&lt;br&gt;&lt;font style=&quot;font-size:11px&quot; color=&quot;#a3a3a3&quot;&gt;shared by all cores · ~10 ns&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2e1065;strokeColor=#a78bfa;fontColor=#f5f5f5;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="40" y="370" width="680" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- RAM -->
+        <mxCell id="ram" value="RAM · GBs&lt;br&gt;&lt;font style=&quot;font-size:11px&quot; color=&quot;#a3a3a3&quot;&gt;~100 ns · hundreds of CPU cycles&lt;/font&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;size=10;fillColor=#431407;strokeColor=#fb923c;fontColor=#f5f5f5;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="230" y="500" width="300" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- Edges -->
+        <mxCell id="e1" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#737373;" edge="1" parent="1" source="reg0" target="l1i0"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e2" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#737373;" edge="1" parent="1" source="reg0" target="l1d0"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e3" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#737373;" edge="1" parent="1" source="l1i0" target="l20"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e4" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#737373;" edge="1" parent="1" source="l1d0" target="l20"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e5" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#737373;" edge="1" parent="1" source="reg1" target="l1i1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e6" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#737373;" edge="1" parent="1" source="reg1" target="l1d1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e7" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#737373;" edge="1" parent="1" source="l1i1" target="l21"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e8" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#737373;" edge="1" parent="1" source="l1d1" target="l21"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e9" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#737373;exitX=0.5;exitY=1;entryX=0.235;entryY=0;" edge="1" parent="1" source="l20" target="l3"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e10" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#737373;exitX=0.5;exitY=1;entryX=0.765;entryY=0;" edge="1" parent="1" source="l21" target="l3"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e11" value="64-byte cache lines" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#fb923c;fontColor=#d4d4d4;fontSize=11;labelBackgroundColor=#000000;" edge="1" parent="1" source="l3" target="ram"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <!-- Speed / size legend -->
+        <mxCell id="legend" value="faster · smaller ↑&lt;br&gt;&lt;br&gt;slower · bigger ↓" style="text;html=1;align=left;verticalAlign=middle;fontColor=#a3a3a3;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="600" y="505" width="140" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

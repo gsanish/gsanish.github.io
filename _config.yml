@@ -1,0 +1,49 @@
+title: Sanish's Blog
+author: Sanish
+email: sanishg83@gmail.com
+description: >-
+  Notes, ideas, and things I'm working on.
+url: "https://gsanish.github.io"
+baseurl: ""
+github_username: gsanish
+
+theme: just-the-docs
+plugins:
+  - jekyll-seo-tag
+
+permalink: /:title/
+timezone: Asia/Kolkata
+
+# Just the Docs
+color_scheme: black
+search_enabled: true
+heading_anchors: true
+aux_links:
+  GitHub: https://github.com/gsanish
+aux_links_new_tab: true
+footer_content: "© Sanish"
+
+# Render ```mermaid code blocks as diagrams (Mermaid is loaded from jsDelivr).
+mermaid:
+  version: "11.4.1"
+# Leave last_edit_timestamp unset: it would print "Page last modified" dates.
+
+# Show blog posts in the sidebar (and in search) under a "Posts" heading.
+just_the_docs:
+  collections:
+    posts:
+      name: Posts
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+exclude:
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - vendor
